@@ -12,116 +12,81 @@ DURATION: 4 WEEKS
 
 MENTOR: NEELA SANTHOSH KUMAR
 
-# Live Editor with React, Quill, and Socket.IO
+This project is a real-time chat application developed using PHP and WebSocket technology (using Ratchet Library). It provides a seamless and interactive platform for users to engage in real-time conversations, featuring two chat modes: Group/Public Chat & One-to-One/Private Chat. Built with WebSocket technology which allows a full-duplex bi-directional connection over a single TCP connection, my application provides a seamless platform for instant communication.
 
-This project is a collaborative text editor built using React, Quill, and Socket.IO. It allows multiple users to simultaneously edit a document in real-time, with changes instantly reflected across all connected clients. The frontend is developed using Vite with React, providing a fast and efficient development environment.
+Frontend technologies used: jQuery, JavaScript, AJAX, Parsley JavaScript form validation library, and Bootstrap (responsive design).
 
-## Demo
+## Screenshots:
 
-#### Spinning up containers
+***Group/Public Chat:***
 
-<image src="https://raw.githubusercontent.com/nimish-kumar/live-editor/master/demo/images/spinning-up-containers.gif" width="667" height="223" />
+![group-public-chat](https://github.com/AhmedYahyaE/realtime-websocket-php-chat-application/assets/118033266/29181d84-a56f-4e29-a793-b41e470d9533)
 
-#### Testing on local
-They share the same URL, but modifications occur exclusively on one of them.
+***One-to-One/Private Chat:***
 
-<image src="https://raw.githubusercontent.com/nimish-kumar/live-editor/master/demo/images/live-editor-run.gif" width="950" height="450" />
+![one-to-one-private-chat](https://github.com/AhmedYahyaE/realtime-websocket-php-chat-application/assets/118033266/cd0c52ca-1a42-4e38-8253-1a1c78a6908e)
 
-#### Cleanup
+***Profile Page:***
 
-<image src="https://raw.githubusercontent.com/nimish-kumar/live-editor/master/demo/images/destroying-containers.gif" width="667" height="223" />
+![profile-page](https://github.com/AhmedYahyaE/realtime-websocket-php-chat-application/assets/118033266/d74fc7ab-16a7-435e-8707-8008a1e9cb78)
 
-## Table of Contents
+***WebSocket Protocol:***
 
-- [Live Editor with React, Quill, and Socket.IO](#live-editor-with-react-quill-and-socketio)
-  - [Demo](#demo)
-      - [Spinning up containers](#spinning-up-containers)
-      - [Testing on local](#testing-on-local)
-      - [Cleanup](#cleanup)
-  - [Table of Contents](#table-of-contents)
-  - [Features](#features)
-  - [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-    - [Usage Guidelines](#usage-guidelines)
-  - [Contributing](#contributing)
-    - [Prerequisites](#prerequisites-1)
-    - [Environment Variables](#environment-variables)
-    - [Running development server](#running-development-server)
+![websocket-connection](https://github.com/AhmedYahyaE/realtime-websocket-php-chat-application/assets/118033266/62bc916c-f6e9-4dfd-a322-3fba92fc4d01)
 
-## Features
-- **Real-time Collaboration**: Multiple users can collaborate and edit the same document in real-time.
-- **Rich Text Editing**: The Quill editor allows for easy and intuitive rich text editing.
-- **Efficient Development**: The frontend is built with Vite and React, providing a fast and efficient development environment.
-- **Socket.IO Integration**: Socket.IO is used for handling real-time communication between clients.
+## Features:
+1- Real-time Seamless Chat Messaging using WebSocket Technology (Ratchet Library).
 
-## Getting Started
+2- Two Chat Modes: Group/Public Chat & One-to-One/Private Chat.
 
-### Prerequisites
+3- Real-time Push Notifications to show Read/Unread Messages Count.
 
-Make sure you have the following installed:
+4- Real-time User Online/Offline Status.
 
-- Node.js (v20.9.0+): [Download and install Node.js](https://nodejs.org/) [ONLY FOR DEVELOPMENT]
-- Docker: [Download and install Docker](https://docs.docker.com/get-docker/)
-- Docker Compose: [Download and install Docker Compose](https://docs.docker.com/compose/install/)
+5- Using Ratchet PHP WebSocket Library.
 
-### Usage Guidelines
-1. Clone the repository:
+6- Saving the Chat History for both Public & Private Chat Modes in a MySQL Database.
 
-   ```bash
-   git clone https://github.com/nimish-kumar/live-editor
-   ```
-2. To start the containers, ensure you are at the project's root directory and execute the following command:
-    ```bash
-    docker compose -f docker-compose.dev.yaml up
-    ```
-    You can append `-d` flag to run the containers in `detached mode`.
-     ```bash
-    docker compose -f docker-compose.dev.yaml up -d
-    ```
+7- Multiple AJAX Requests.
 
-3. Once you see serving message, follow the link to get started.
-4. To halt the containers, terminate the process in the terminal using `Ctrl+C`. To remove the containers, ensure you are at the project's root directory and execute the following command:
-    ```bash
-    docker compose -f docker-compose.dev.yaml down
-    ```
-5. Ensure you clear all Docker images and rebuild them, along with the containers, in case there are code changes. To remove existing images, use the following commands:
-    ```bash
-    docker image remove live-editor-client
-    docker image remove live-editor-server
-    ```
+8- Object-Oriented Programming.
 
-## Contributing
+9- Chat HTML Form Validation using Parsley JavaScript Library.
 
-We welcome contributions to enhance and improve this project! Follow the steps below to get started:
+10- User Registration, Validation, Authentication, and Authorization.
 
-### Prerequisites
+11- Sending Registration Verification Code to emails using PHPMailer Library.
 
-Make sure you have the following installed:
+12- Playing different Notification Sounds when sending and receiving chat messages.
 
-- [Node.js](https://nodejs.org/)
-- [pnpm](https://pnpm.io/)
+13- File Upload (profile image).
 
-### Environment Variables
-Create a .env file in root directory and add the following variables:
+14- Regular Expression.
 
-```.env
-PROJ_SERVER_PORT=8001
-PROJ_CLIENT_PORT=5173
-PROJ_DEPLOYED_SERVER_URL=http://localhost:${PROJ_SERVER_PORT}
-PROJ_DB_CONNECTION_STRING=mongodb://localhost:27017/editor-db
-PROJ_DEPLOYED_FRONTEND_URL=http://localhost:${PROJ_CLIENT_PORT}
-```
+15- Responsive Design using Bootstrap.
 
-### Running development server
-1. Start MongoDB container:
-   ```bash
-   docker run -d -p 27017:27017 -v ~/mongodb:/data/db --name live-editor mongo:7.0.3
-   ```
-2. Switch to client/server folder. To install packages:
-    ```bash
-    pnpm install
-    ```
-3. To run server/client:
-    ```bash
-    pnpm run dev
-    ```
+## Application URLs:
+1- **Group/Public Chat**: Engage in lively discussions with ALL the Chat Application users at http://localhost:8000/group_chat.php
+
+2- **One-to-One/Private Chat**: Connect with individuals privately, ensuring confidential and personalized interactions. Chat with one particular, specific, targeted user of our Chat Application members at http://localhost:8000/private_chat.php
+
+## Installation & Configuration:
+1- Clone the project or download it.
+
+2- Create a MySQL database named **\`chat_application\`**, then import the **[chat_application database SQL Dump File](<Database - chat_application/chat_application database - SQL Dump File - phpMyAdmin Export.sql>)** into your **\`chat_application\`** database.
+
+3- Navigate to the database connection configuration file in [Database_connection.php](database/Database_connection.php) file and configure/edit/update the file with your MySQL database credentials and other configuration settings.
+
+4- Navigate to the project root directory using the **`cd`** terminal command, and then start your PHP built-in Development Web Server by running the command: **`php -S localhost:8000`**.
+
+5- From your terminal window (at the project root directory), start the WebSocket Server by running the command: **`php bin/server.php`**.
+
+6- In your browser, go to http://localhost:8000 to login using one of the following ready-to-use account credentials:
+
+> Email: **ahmed.yahya@test.com**, Password: **123456**
+
+> Email: **fatma@test.com**, Password: **123456**
+
+## Contribution:
+Contributions to my Real-time WebSocket PHP Chat Application are most welcome! If you find any issues, have suggestions for improvements, or want to add new features, please open an issue or submit a pull request.
+
